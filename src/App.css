@@ -36,3 +36,142 @@
     transform: rotate(360deg);
   }
 }
+
+.app {
+  width: 100vw; height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #e7e7e7;
+}
+
+.app-header {
+  box-shadow: 0 0 24px rgba(0,0,0,.2);
+  padding: 1em 2em;
+  position: relative;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.app-header h1{
+  padding: 0;
+  margin: 0;
+}
+
+.app-container {
+  width: 92%;
+
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px;
+}
+
+.app-footer {
+  height: 204px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.app-footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-footer__container__add-task__icon {
+  height: 62px;
+  width: 62px;
+  background: green;
+  border-radius: 2em;
+  position: relative;
+  cursor: pointer;
+  display: block;
+  transition:transform .4s, opacity .8s;
+  opacity: .6;
+}
+.app-footer__container__add-task__icon:before {
+  content: '+';
+  position: absolute;
+  font-size: 3em;
+  left: 15px; top:2px;
+  color:#fff;
+}
+
+.app-footer__container__add-task__icon:hover {
+  opacity: 1;
+  transform: scale(.96);
+}
+
+.box-shadow {
+  /*box-shadow: 4px 4px 30px rgba(0,0,0,.28), -6px -4px 10px rgba(255, 255, 255, 1);
+  border-radius: 32px;*/
+  background-color: #e5e5e5; /* светлый фон */
+  border-radius: 10px;
+  box-shadow: 8px 8px 15px #b3b3b3, /* темная тень */
+              -8px -8px 15px #ffffff; /* светлая тень */
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.box-shadow:active {
+  box-shadow: inset 8px 8px 15px #b3b3b3, /* темная внутренняя тень */
+              inset -8px -8px 15px #ffffff; /* светлая внутренняя тень */
+}
+
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  height: calc(100% - 256px);
+  padding: 3em 0 0 0;
+  position: relative;
+}
+
+.task-form {
+  width: 100%;
+  height: 24%;
+  box-sizing: border-box;
+  padding: 2.4em;
+}
+
+.tasks-list {
+  width: 100%;
+  height: 76%;
+  box-sizing: border-box;
+}
+
+.pop-up {
+display: none;
+  position: fixed;
+  top:0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 1000;
+
+  justify-content: center;
+  align-items: center;
+}
+.pop-up.active {
+  display: flex;
+}
+.pop-up__wrapper {
+  background: #000;
+  opacity: .6;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+
+.pop-up__container {
+  width: 64%;
+  border-radius: .2em;
+  margin: 0 auto;
+  background: #fff;
+  padding: 1em;
+  z-index: 1111;
+  box-shadow: 0 0 8px rgba(0,0,0,.2);
+}
+
