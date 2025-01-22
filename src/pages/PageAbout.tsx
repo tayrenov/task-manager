@@ -1,6 +1,14 @@
 const PageAbout = () => {
     return (
-        <div>PageAbout</div>
+        <>
+            <div>PageAbout</div>
+            <ul>
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Firebase</li>
+            </ul>
+        </>
+
     )
 }
 

@@ -11,7 +11,12 @@ const PageMainContent = () => {
     return (
         <>
             {tasks.length!==0 
-            ? <TaskList tasks={tasks} /> 
+            ? (
+                <>
+                    <h1>Task List</h1>
+                    <TaskList tasks={tasks} />
+                </>
+            ) 
             : <GreetingPlaceholder />}
         </>
         

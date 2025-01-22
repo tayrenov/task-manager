@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './reset.css'
-import './index.css';
+import './bulma-config.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import { store } from './redux/store';
-
+//import { store } from './redux/store';
+import store from './beta_redux/store/store';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

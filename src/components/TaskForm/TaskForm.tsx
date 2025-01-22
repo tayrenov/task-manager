@@ -27,26 +27,44 @@ const TaskForm: React.FC = () => {
 
     return (
         <>
-            <div className='pop-up__container box-shadow'>
-                <form onSubmit={handleSubmit} className='task-form'>
-                    <h2>Add Task</h2>
-                    <input 
-                        type="text" 
-                        value={title} 
-                        onChange={(e) => setTitle(e.target.value)} 
-                        placeholder="Title" 
-                        required 
-                    />
-                    <input 
-                        type="text" 
-                        value={description} 
-                        onChange={(e) => setDescription(e.target.value)} 
-                        placeholder="Description" 
-                    />
-                    <input 
-                        type="date" 
-                        onChange={(e) => setDeadline(new Date(e.target.value))} 
-                    />
+            <div className='add-item__container'>
+                <form onSubmit={handleSubmit}>
+                    <label>
+                        <span>Title</span>
+                        <input 
+                            type="text" 
+                            value={title} 
+                            onChange={(e) => setTitle(e.target.value)} 
+                            placeholder="Title" 
+                            required 
+                        />
+                    </label>
+
+                    <label>
+                        <span>Description</span>
+                        <input 
+                            type="text" 
+                            value={description} 
+                            onChange={(e) => setDescription(e.target.value)} 
+                            placeholder="Description" 
+                        />
+                    </label>
+                    
+                    <div className='add-item__row'>
+                        <label>
+                            <span>Create time</span>
+                            <input type='date' disabled></input>
+                        </label>
+
+                        <label>
+                            <span>Deadline</span>
+                            <input 
+                                type="date" 
+                                onChange={(e) => setDeadline(new Date(e.target.value))} 
+                            />
+                        </label>
+                    </div>
+
                     <label>
                         Completed:
                         <input 

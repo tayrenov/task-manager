@@ -1,74 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { TasksState, TaskItem, GlobalSettings } from '../dataTypes';
-
-const initialTasks = [
-    {
-        id: '1', 
-        title:'title',
-        description: 'description',
-        status: false,
-        deadline: new Date('2024-06-23')
-    },
-    {
-        id: '2', 
-        title:'title1',
-        description: 'description1',
-        status: false,
-        deadline: new Date('2024-06-26')
-    },
-    {
-        id: '3', 
-        title:'title3',
-        description: 'description',
-        status: false,
-        deadline: new Date('2024-06-23')
-    },
-    {
-        id: '4', 
-        title:'title44',
-        description: 'description1',
-        status: false,
-        deadline: new Date('2024-06-26')
-    },
-    {
-        id: '5', 
-        title:'title55',
-        description: 'description',
-        status: false,
-        deadline: new Date('2024-06-23')
-    },
-    {
-        id: '6', 
-        title:'title61666',
-        description: 'description1',
-        status: false,
-        deadline: new Date('2024-06-26')
-    },
-    {
-        id: '7', 
-        title:'title777551',
-        description: 'description1',
-        status: false,
-        deadline: new Date('2024-06-26')
-    },
-    {
-        id: '8', 
-        title:'title888',
-        description: 'description',
-        status: false,
-        deadline: new Date('2024-06-23')
-    },
-    {
-        id: '9', 
-        title:'title999991',
-        description: 'description1',
-        status: false,
-        deadline: new Date('2024-06-26')
-    },
-]
+import { initialTasksData } from '../redux/initialTasks';
 
 const initialState: TasksState = {
-    tasks: initialTasks,
+    tasks: initialTasksData,
     activeTask: null, // Изначально активной задачи нет
     settings: {
         theme: 'light', // Тема по умолчанию — светлая
